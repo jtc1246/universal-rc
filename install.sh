@@ -30,6 +30,11 @@ status=$?
 if [ $status -ne 0 ]; then
     success="false"
 fi
+curl -f -L -o ~/.universal-rc/quiet.sh "https://github.com/jtc1246/universal-rc/blob/main/quiet.sh?raw=True"
+status=$?
+if [ $status -ne 0 ]; then
+    success="false"
+fi
 
 if [ "$success" = "false" ]; then
     echo "Failed to download the files from github, please try again."
