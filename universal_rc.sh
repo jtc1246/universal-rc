@@ -1,5 +1,6 @@
 if ! (ps aux | grep -q "[u]niversal_rc_update.sh"); then
-    sh ~/.universal-rc/universal_rc_update.sh & disown
+    (sh ~/.universal-rc/universal_rc_update.sh &)
+    disown %1
 fi
 
 function universal-rc() {
