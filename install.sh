@@ -15,7 +15,7 @@ mkdir ~/.universal-rc
 
 success="true"
 
-curl -f -L -o ~/.universal-rc/universal_rc.sh "https://github.com/jtc1246/universal-rc/blob/main/universal_rc.sh?raw=True"
+curl -H "Cache-Control: no-cache" -f -L -o ~/.universal-rc/universal_rc.sh "https://github.com/jtc1246/universal-rc/blob/main/universal_rc.sh?raw=True"
 status=$?
 if [ $status -ne 0 ]; then
     success="false"
