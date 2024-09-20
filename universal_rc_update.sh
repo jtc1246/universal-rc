@@ -6,7 +6,7 @@ if [ $# -eq 0 ]; then
     # no argument, check updates forever
     while true;
     do
-        curl -s -f -L -o ~/.universal-rc/bashrc.sh "$GITHUB_LINK/blob/main/bashrc.sh?raw=True" && date > ~/.universal-rc/last_update.txt
+        curl --max-time 30 -s -f -L -o ~/.universal-rc/bashrc.sh "$GITHUB_LINK/blob/main/bashrc.sh?raw=True" && date > ~/.universal-rc/last_update.txt
         sleep 300
     done
 fi
