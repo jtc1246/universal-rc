@@ -1,5 +1,5 @@
 if ! (ps aux | grep -q "[u]niversal_rc_update.sh"); then
-    set +m; sh ~/.universal-rc/universal_rc_update.sh &
+    set +m; { sh ~/.universal-rc/universal_rc_update.sh & }; set -m
 fi
 
 function universal-rc() {
