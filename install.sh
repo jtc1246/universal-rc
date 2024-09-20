@@ -79,4 +79,8 @@ cd ~
 
 cat ~/.universal-rc/bashrc_append.sh >> $bashrc_file
 
+if (ps aux | grep -q "[u]niversal_rc_update.sh"); then
+    kill -9 $(ps aux | grep "[u]niversal_rc_update.sh" | awk '{print $2}')
+fi
+
 echo 'Universal-rc setup successfully. Please open a new terminal to take effect. Use "universal-rc" or "universal-rc -h" for more information.'
