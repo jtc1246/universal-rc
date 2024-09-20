@@ -32,7 +32,7 @@ if [ $status -ne 0 ]; then
 fi
 
 if [ "$success" = "false" ]; then
-    echo "Failed to download the files from github, please try again later."
+    echo "Failed to download the files from github, please try again."
     rm -rf ~/.universal-rc
     exit -1
 fi
@@ -73,3 +73,5 @@ fi
 cd ~
 
 cat ~/.universal-rc/bashrc_append.sh >> $bashrc_file
+
+echo 'Universal-rc setup successfully. Please open a new terminal to take effect. Use "universal-rc" or "universal-rc -h" for more information.'
