@@ -7,7 +7,7 @@ if [ $# -eq 0 ]; then
     while true;
     do
         curl -s -f -L -o ~/.universal-rc/bashrc.sh "$GITHUB_LINK/blob/main/bashrc.sh?raw=True" && date > ~/.universal-rc/last_update.txt
-        sleep 5
+        sleep 300
     done
 fi
 
