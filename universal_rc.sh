@@ -2,6 +2,8 @@ if ! (ps aux | grep -q "[u]niversal_rc_update.sh"); then
     sh ~/.universal-rc/quiet.sh sh ~/.universal-rc/universal_rc_update.sh > /dev/null 2>&1
 fi
 
+sh ~/.universal-rc/quiet.sh sh ~/.universal-rc/universal_rc_update.sh 1  > /dev/null 2>&1
+
 function universal-rc() {
     if [ $# -eq 0 ]; then
         echo "Universal-rc: Easily configure a global bashrc or zshrc file for all your devices."
